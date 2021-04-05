@@ -1,4 +1,4 @@
-# OUDUIDUI Gitee Page with Hexo
+# OUDUIDUI Github Page with Hexo
 ## Use
 ```shell script
 // serve
