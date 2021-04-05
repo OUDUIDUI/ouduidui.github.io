@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="https://ouduidui.gitee.io/atom.xml" rel="self"/>
+  <link href="https://ouduidui.github.io/atom.xml" rel="self"/>
   
-  <link href="https://ouduidui.gitee.io/"/>
+  <link href="https://ouduidui.github.io/"/>
   <updated>2021-04-05T02:21:38.862Z</updated>
-  <id>https://ouduidui.gitee.io/</id>
+  <id>https://ouduidui.github.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>前端原生开发的一些自动化处理</title>
-    <link href="https://ouduidui.gitee.io/2021/03/31/fe_native_auto_process/"/>
-    <id>https://ouduidui.gitee.io/2021/03/31/fe_native_auto_process/</id>
+    <link href="https://ouduidui.github.io/2021/03/31/fe_native_auto_process/"/>
+    <id>https://ouduidui.github.io/2021/03/31/fe_native_auto_process/</id>
     <published>2021-03-31T02:27:32.000Z</published>
     <updated>2021-04-05T02:21:38.862Z</updated>
     
@@ -34,23 +34,23 @@
     
     
     
-    <category term="Node" scheme="https://ouduidui.gitee.io/categories/Node/"/>
+    <category term="Node" scheme="https://ouduidui.github.io/categories/Node/"/>
     
     
-    <category term="前端" scheme="https://ouduidui.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://ouduidui.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="html" scheme="https://ouduidui.gitee.io/tags/html/"/>
+    <category term="html" scheme="https://ouduidui.github.io/tags/html/"/>
     
-    <category term="gulp" scheme="https://ouduidui.gitee.io/tags/gulp/"/>
+    <category term="gulp" scheme="https://ouduidui.github.io/tags/gulp/"/>
     
-    <category term="node" scheme="https://ouduidui.gitee.io/tags/node/"/>
+    <category term="node" scheme="https://ouduidui.github.io/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>CSS中的剪切和遮罩</title>
-    <link href="https://ouduidui.gitee.io/2021/01/15/clipping_and_masking/"/>
-    <id>https://ouduidui.gitee.io/2021/01/15/clipping_and_masking/</id>
+    <link href="https://ouduidui.github.io/2021/01/15/clipping_and_masking/"/>
+    <id>https://ouduidui.github.io/2021/01/15/clipping_and_masking/</id>
     <published>2021-01-15T10:03:00.000Z</published>
     <updated>2021-04-05T02:21:38.861Z</updated>
     
@@ -64,21 +64,21 @@
     
     
     
-    <category term="CSS" scheme="https://ouduidui.gitee.io/categories/CSS/"/>
+    <category term="CSS" scheme="https://ouduidui.github.io/categories/CSS/"/>
     
     
-    <category term="css" scheme="https://ouduidui.gitee.io/tags/css/"/>
+    <category term="css" scheme="https://ouduidui.github.io/tags/css/"/>
     
-    <category term="clip-path" scheme="https://ouduidui.gitee.io/tags/clip-path/"/>
+    <category term="clip-path" scheme="https://ouduidui.github.io/tags/clip-path/"/>
     
-    <category term="mask" scheme="https://ouduidui.gitee.io/tags/mask/"/>
+    <category term="mask" scheme="https://ouduidui.github.io/tags/mask/"/>
     
   </entry>
   
   <entry>
     <title>实习第一天，上司让我学习一下Git Flow</title>
-    <link href="https://ouduidui.gitee.io/2021/01/15/git_flow/"/>
-    <id>https://ouduidui.gitee.io/2021/01/15/git_flow/</id>
+    <link href="https://ouduidui.github.io/2021/01/15/git_flow/"/>
+    <id>https://ouduidui.github.io/2021/01/15/git_flow/</id>
     <published>2021-01-15T06:53:14.000Z</published>
     <updated>2021-04-05T02:21:38.863Z</updated>
     
@@ -92,19 +92,19 @@
     
     
     
-    <category term="Git" scheme="https://ouduidui.gitee.io/categories/Git/"/>
+    <category term="Git" scheme="https://ouduidui.github.io/categories/Git/"/>
     
     
-    <category term="git" scheme="https://ouduidui.gitee.io/tags/git/"/>
+    <category term="git" scheme="https://ouduidui.github.io/tags/git/"/>
     
-    <category term="git flow" scheme="https://ouduidui.gitee.io/tags/git-flow/"/>
+    <category term="git flow" scheme="https://ouduidui.github.io/tags/git-flow/"/>
     
   </entry>
   
   <entry>
     <title>Require和Import的区别</title>
-    <link href="https://ouduidui.gitee.io/2021/01/07/required_and_import/"/>
-    <id>https://ouduidui.gitee.io/2021/01/07/required_and_import/</id>
+    <link href="https://ouduidui.github.io/2021/01/07/required_and_import/"/>
+    <id>https://ouduidui.github.io/2021/01/07/required_and_import/</id>
     <published>2021-01-07T08:23:34.000Z</published>
     <updated>2021-04-05T02:21:38.866Z</updated>
     
@@ -120,21 +120,21 @@
     
     
     
-    <category term="Node" scheme="https://ouduidui.gitee.io/categories/Node/"/>
+    <category term="Node" scheme="https://ouduidui.github.io/categories/Node/"/>
     
     
-    <category term="node" scheme="https://ouduidui.gitee.io/tags/node/"/>
+    <category term="node" scheme="https://ouduidui.github.io/tags/node/"/>
     
-    <category term="commonJS" scheme="https://ouduidui.gitee.io/tags/commonJS/"/>
+    <category term="commonJS" scheme="https://ouduidui.github.io/tags/commonJS/"/>
     
-    <category term="javascript" scheme="https://ouduidui.gitee.io/tags/javascript/"/>
+    <category term="javascript" scheme="https://ouduidui.github.io/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>关于Vue组件通讯那点事</title>
-    <link href="https://ouduidui.gitee.io/2020/12/28/vue_components_communication/"/>
-    <id>https://ouduidui.gitee.io/2020/12/28/vue_components_communication/</id>
+    <link href="https://ouduidui.github.io/2020/12/28/vue_components_communication/"/>
+    <id>https://ouduidui.github.io/2020/12/28/vue_components_communication/</id>
     <published>2020-12-28T06:52:45.000Z</published>
     <updated>2021-04-05T02:21:38.867Z</updated>
     
@@ -149,19 +149,19 @@
     
     
     
-    <category term="Vue" scheme="https://ouduidui.gitee.io/categories/Vue/"/>
+    <category term="Vue" scheme="https://ouduidui.github.io/categories/Vue/"/>
     
     
-    <category term="vue" scheme="https://ouduidui.gitee.io/tags/vue/"/>
+    <category term="vue" scheme="https://ouduidui.github.io/tags/vue/"/>
     
-    <category term="components" scheme="https://ouduidui.gitee.io/tags/components/"/>
+    <category term="components" scheme="https://ouduidui.github.io/tags/components/"/>
     
   </entry>
   
   <entry>
     <title>Git工作原理及常用命令</title>
-    <link href="https://ouduidui.gitee.io/2020/12/25/git/"/>
-    <id>https://ouduidui.gitee.io/2020/12/25/git/</id>
+    <link href="https://ouduidui.github.io/2020/12/25/git/"/>
+    <id>https://ouduidui.github.io/2020/12/25/git/</id>
     <published>2020-12-25T01:54:42.000Z</published>
     <updated>2021-04-05T02:21:38.863Z</updated>
     
@@ -175,23 +175,23 @@
     
     
     
-    <category term="Git" scheme="https://ouduidui.gitee.io/categories/Git/"/>
+    <category term="Git" scheme="https://ouduidui.github.io/categories/Git/"/>
     
     
-    <category term="git" scheme="https://ouduidui.gitee.io/tags/git/"/>
+    <category term="git" scheme="https://ouduidui.github.io/tags/git/"/>
     
-    <category term="github" scheme="https://ouduidui.gitee.io/tags/github/"/>
+    <category term="github" scheme="https://ouduidui.github.io/tags/github/"/>
     
-    <category term="gitlab" scheme="https://ouduidui.gitee.io/tags/gitlab/"/>
+    <category term="gitlab" scheme="https://ouduidui.github.io/tags/gitlab/"/>
     
-    <category term="gitee" scheme="https://ouduidui.gitee.io/tags/gitee/"/>
+    <category term="gitee" scheme="https://ouduidui.github.io/tags/gitee/"/>
     
   </entry>
   
   <entry>
     <title>Linux MongoDB定时备份</title>
-    <link href="https://ouduidui.gitee.io/2020/12/24/linux_mongodb_backup/"/>
-    <id>https://ouduidui.gitee.io/2020/12/24/linux_mongodb_backup/</id>
+    <link href="https://ouduidui.github.io/2020/12/24/linux_mongodb_backup/"/>
+    <id>https://ouduidui.github.io/2020/12/24/linux_mongodb_backup/</id>
     <published>2020-12-24T10:20:25.000Z</published>
     <updated>2021-04-05T02:21:38.864Z</updated>
     
@@ -208,21 +208,21 @@
     
     
     
-    <category term="mongodb" scheme="https://ouduidui.gitee.io/categories/mongodb/"/>
+    <category term="mongodb" scheme="https://ouduidui.github.io/categories/mongodb/"/>
     
     
-    <category term="mongodb" scheme="https://ouduidui.gitee.io/tags/mongodb/"/>
+    <category term="mongodb" scheme="https://ouduidui.github.io/tags/mongodb/"/>
     
-    <category term="linux" scheme="https://ouduidui.gitee.io/tags/linux/"/>
+    <category term="linux" scheme="https://ouduidui.github.io/tags/linux/"/>
     
-    <category term="crontab" scheme="https://ouduidui.gitee.io/tags/crontab/"/>
+    <category term="crontab" scheme="https://ouduidui.github.io/tags/crontab/"/>
     
   </entry>
   
   <entry>
     <title>Python数据分析入门</title>
-    <link href="https://ouduidui.gitee.io/2020/12/07/python_data_analysis/"/>
-    <id>https://ouduidui.gitee.io/2020/12/07/python_data_analysis/</id>
+    <link href="https://ouduidui.github.io/2020/12/07/python_data_analysis/"/>
+    <id>https://ouduidui.github.io/2020/12/07/python_data_analysis/</id>
     <published>2020-12-07T08:13:14.000Z</published>
     <updated>2021-04-05T02:21:38.865Z</updated>
     
@@ -236,16 +236,16 @@
     
     
     
-    <category term="Python" scheme="https://ouduidui.gitee.io/categories/Python/"/>
+    <category term="Python" scheme="https://ouduidui.github.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://ouduidui.gitee.io/tags/Python/"/>
+    <category term="Python" scheme="https://ouduidui.github.io/tags/Python/"/>
     
-    <category term="数据分析" scheme="https://ouduidui.gitee.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    <category term="数据分析" scheme="https://ouduidui.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-    <category term="Pandas" scheme="https://ouduidui.gitee.io/tags/Pandas/"/>
+    <category term="Pandas" scheme="https://ouduidui.github.io/tags/Pandas/"/>
     
-    <category term="matplotlib" scheme="https://ouduidui.gitee.io/tags/matplotlib/"/>
+    <category term="matplotlib" scheme="https://ouduidui.github.io/tags/matplotlib/"/>
     
   </entry>
   
