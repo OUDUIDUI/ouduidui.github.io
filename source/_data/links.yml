@@ -1,0 +1,84 @@
+- name: MacWk
+  link: https://www.macwk.com/
+  description: Mac应用免费下载安装
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: 奇迹秀
+  link: http://www.qijishow.com/down/index.html
+  description: Win、Mac应用免费下载安装
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: 字体天下
+  link: http://www.fonts.net.cn/
+  description: 众多免费字体下载
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: 一个工具箱
+  link: http://www.atoolbox.net/
+  description: 聚集很多好用的在线工具
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: I LOVE IMG
+  link: https://www.iloveimg.com/zh-cn
+  description: 图片在线工具箱
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: uigradients
+  link: https://uigradients.com/
+  description: 提供各种渐变颜色
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: NEWCGER
+  link: https://www.newcger.com/aemoban/
+  description: 提供很多免费AE模板
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: ICONS8
+  link: https://icons8.com/
+  description: 提供很多免费图标、图片、矢量图、音频素材
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: PDF Converter
+  link: https://www.freepdfconvert.com/zh-cn
+  description: PDF在线工具箱
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: Color Hunt
+  link: https://colorhunt.co/
+  description: 提供各种搭配好的颜色
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: I LOVE PDF
+  link: https://www.ilovepdf.com/zh-cn
+  description: PDF在线工具箱
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: pixabay
+  link: https://pixabay.com/zh/
+  description: 免费正版高清图片素材库
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: 创造狮
+  link: http://www.chuangzaoshi.com/
+  description: 创意工作者导航集合
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: 小轩砌站
+  link: https://www.xx7z.com/
+  description: 免费资源分享平台
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: mixkit
+  link: https://mixkit.co/
+  description: 免费视频、音频素材
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: TINYPNG
+  link: https://tinypng.com/
+  description: 在线压缩图片
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
+
+- name: iconfont
+  link: https://www.iconfont.cn/
+  description: 阿里巴巴矢量图标库
+  avatar: https://zurich.cdn.xyh.io/pic_hd.jpg
