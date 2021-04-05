@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="OUDUIDUI">
+    
+    <title>
+        
+            CSS中的剪切和遮罩 |
+        
+        OUDUIDUI
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"ouduidui.gitee.io","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/logo.svg","article_img_align":"center","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"May You Live The Way You Want."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                OUDUIDUI
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">CSS中的剪切和遮罩</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">OUDUIDUI</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-01-15 18:03:00
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/CSS/">CSS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/css/">css</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/clip-path/">clip-path</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/mask/">mask</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>935 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>4 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="剪切和遮罩的区别"><a href="#剪切和遮罩的区别" class="headerlink" title="剪切和遮罩的区别"></a>剪切和遮罩的区别</h1><p><strong>剪切（Clipping）</strong> 是针对路径的，而<strong>遮罩（Masking）</strong> 是针对图像的。</p>
+<h1 id="clip-path"><a href="#clip-path" class="headerlink" title="clip-path"></a>clip-path</h1><h2 id="inset"><a href="#inset" class="headerlink" title="inset"></a>inset</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clip-path-1</span> &#123;</span><br><span class="line">    <span class="attribute">clip-path</span>: <span class="built_in">inset</span>(<span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span> <span class="number">40px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>inset()</code>会绘成一个矩形路径，对对象进行剪切。</p>
+<p>这四个值与margin、padding的顺序相同：</p>
+<ul>
+<li>距元素顶部10px</li>
+<li>距元素右侧20px</li>
+<li>距元素底部30px</li>
+<li>距元素左侧40px</li>
+</ul>
+<blockquote>
+<p>有一点需要注意的，就是这里的参数是无需逗号隔离的</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/1.png"
+                      alt="inset"
+                ></p>
+<h2 id="circle"><a href="#circle" class="headerlink" title="circle"></a>circle</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clip-path-2</span> &#123;</span><br><span class="line">    <span class="attribute">clip-path</span>: <span class="built_in">circle</span>(<span class="number">100px</span> at center);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>circle()</code>会绘成一个圆形路径，对对象进行剪切。</p>
+<p>参数一般为<code>半径 at 圆心</code>。<code>半径</code>支持具体长度或者百分比，而圆心可以写成坐标位置,如果是正中心的话可以写成<code>center</code>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">clip-path</span>: <span class="built_in">circle</span>(<span class="number">100px</span> at center);   <span class="comment">/* 以对象中心作为圆心，绘制100px为半径的圆 */</span></span><br><span class="line"><span class="attribute">clip-path</span>: <span class="built_in">circle</span>(<span class="number">50%</span> at <span class="number">100px</span> <span class="number">90px</span>);   <span class="comment">/* 以对象距左侧100px，距顶部90px作为圆心，绘制以对象对角线50%长度作为半径的圆 */</span></span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/2.png"
+                      alt="circle"
+                ></p>
+<h2 id="ellipse"><a href="#ellipse" class="headerlink" title="ellipse"></a>ellipse</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clip-path-3</span> &#123;</span><br><span class="line">    <span class="attribute">clip-path</span>: <span class="built_in">circle</span>(<span class="number">50%</span> at <span class="number">100px</span> <span class="number">90px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>ellipse()</code>会绘成一个椭圆形路径，对对象进行剪切。</p>
+<p>参数跟<code>circle()</code>雷同，为<code>半长轴 半短轴 at 圆心</code>。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/3.png"
+                      alt="ellipse"
+                ></p>
+<h2 id="polygon"><a href="#polygon" class="headerlink" title="polygon"></a>polygon</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clip-path-5</span> &#123;</span><br><span class="line">    <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(<span class="number">5%</span> <span class="number">5%</span>, <span class="number">100%</span> <span class="number">0%</span>, <span class="number">100%</span> <span class="number">75%</span>, <span class="number">75%</span> <span class="number">75%</span>, <span class="number">75%</span> <span class="number">100%</span>, <span class="number">50%</span> <span class="number">75%</span>, <span class="number">0%</span> <span class="number">75%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>polygon()</code>可以自定义标多个锚点，然后用直线按顺序将所有锚点连成一个闭环路径，并对对象进行剪切。</p>
+<p>参数可以插入多个点坐标，坐标与坐标用<code>,</code>隔开，坐标可用百分比或具体长度。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/4.png"
+                      alt="polygon"
+                ></p>
+<h2 id="配合SVG定义的-lt-clipPath-gt-使用"><a href="#配合SVG定义的-lt-clipPath-gt-使用" class="headerlink" title="配合SVG定义的&lt;clipPath&gt;使用"></a>配合SVG定义的<code>&lt;clipPath&gt;</code>使用</h2><p><code>clip-path</code>可以不直接在<code>CSS</code>中定义剪切路径值，而是引用<code>SVG</code>定义的<code>&lt;clipPath&gt;</code>进行剪切。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;img</span><br><span class="line">    class=&quot;clip-path-6&quot;</span><br><span class="line">    src=&quot;./img/iso-republic-laptop-top-view.png&quot;</span><br><span class="line">    alt=&quot;demo-image&quot;/&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">&quot;0&quot;</span> <span class="attr">height</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">defs</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">clipPath</span> <span class="attr">id</span>=<span class="string">&quot;myClip&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;200&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;150&quot;</span> <span class="attr">r</span>=<span class="string">&quot;100&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;60&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;100&quot;</span> <span class="attr">r</span>=<span class="string">&quot;70&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">clipPath</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">defs</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clip-path-6</span> &#123;</span><br><span class="line">    <span class="attribute">clip-path</span>: <span class="built_in">url</span>(<span class="string">#myClip</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/5.png"
+                      alt="SVG-clipPath"
+                ></p>
+<h2 id="利用clip-path实现变形动画效果"><a href="#利用clip-path实现变形动画效果" class="headerlink" title="利用clip-path实现变形动画效果"></a>利用<code>clip-path</code>实现变形动画效果</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/6.gif"
+                      alt="clip-path-animation"
+                ></p>
+<h3 id="圆形缩放效果"><a href="#圆形缩放效果" class="headerlink" title="圆形缩放效果"></a>圆形缩放效果</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clip-path-7</span> &#123;</span><br><span class="line">    <span class="attribute">clip-path</span>: <span class="built_in">circle</span>( <span class="number">0</span> at center);</span><br><span class="line">    <span class="attribute">animation</span>: circle-animation <span class="number">2s</span> infinite linear alternate;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> circle-animation &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">clip-path</span>: <span class="built_in">circle</span>( <span class="number">0</span> at center);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">clip-path</span>: <span class="built_in">circle</span>(<span class="number">100%</span> at center);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="形状变换效果"><a href="#形状变换效果" class="headerlink" title="形状变换效果"></a>形状变换效果</h3><p>这里需要注意的是，比如当你初始状态是由4个点绘成的形状，那么变换的形状也需要由4个点绘成的形状，否则的话它是直接变成下一个形状，而不是动画变化过去的。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clip-path-8</span> &#123;</span><br><span class="line">    <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(<span class="number">50%</span> <span class="number">0%</span>, <span class="number">0%</span> <span class="number">100%</span>, <span class="number">100%</span> <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">animation</span>: deformation-animation <span class="number">2s</span> infinite linear alternate;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> deformation-animation &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(<span class="number">50%</span> <span class="number">0%</span>, <span class="number">100%</span> <span class="number">50%</span>, <span class="number">50%</span> <span class="number">100%</span>, <span class="number">0%</span> <span class="number">50%</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(<span class="number">25%</span> <span class="number">0%</span>, <span class="number">100%</span> <span class="number">0%</span>, <span class="number">75%</span> <span class="number">100%</span>, <span class="number">0%</span> <span class="number">100%</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(<span class="number">20%</span> <span class="number">0%</span>, <span class="number">80%</span> <span class="number">0%</span>, <span class="number">100%</span> <span class="number">100%</span>, <span class="number">0%</span> <span class="number">100%</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="相关工具"><a href="#相关工具" class="headerlink" title="相关工具"></a>相关工具</h2><p>有一个在线工具<a class="link"   target="_blank" rel="noopener" href="https://www.html.cn/tool/css-clip-path/" >Clippy<i class="fas fa-external-link-alt"></i></a>可以可视化地绘制路径并生成相关css代码。</p>
+<h1 id="mask"><a href="#mask" class="headerlink" title="mask"></a>mask</h1><p><code>mask</code>可使用渐变作为蒙版。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mask-1</span>&#123;</span><br><span class="line">    -webkit-<span class="attribute">mask</span>-image: <span class="built_in">-webkit-gradient</span>(</span><br><span class="line">            linear, left top, right bottom,</span><br><span class="line">            <span class="built_in">color-stop</span>(<span class="number">0.00</span>,  <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>)),</span><br><span class="line">            <span class="built_in">color-stop</span>(<span class="number">0.35</span>,  <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>)),</span><br><span class="line">            <span class="built_in">color-stop</span>(<span class="number">0.50</span>,  <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)),</span><br><span class="line">            <span class="built_in">color-stop</span>(<span class="number">0.65</span>,  <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)),</span><br><span class="line">            <span class="built_in">color-stop</span>(<span class="number">1.00</span>,  <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/7.png"
+                      alt="mask1"
+                ></p>
+<p>也可以使用<code>png</code>或<code>svg</code>图片作为蒙版。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mask-2</span>&#123;</span><br><span class="line">    -webkit-<span class="attribute">mask</span>-image: <span class="built_in">url</span>(<span class="string">&quot;../img/mask.svg&quot;</span>);    <span class="comment">/* 选择蒙版图片 */</span></span><br><span class="line">    -webkit-<span class="attribute">mask</span>-repeat: no-repeat;               <span class="comment">/* 蒙版图片是否重复 */</span></span><br><span class="line">    -webkit-<span class="attribute">mask</span>-<span class="attribute">position</span>: center;                <span class="comment">/* 蒙版图片位置 */</span></span><br><span class="line">    -webkit-<span class="attribute">mask</span>-size: <span class="number">200px</span> <span class="number">200px</span>;               <span class="comment">/* 蒙版图片大小 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/8.png"
+                      alt="mask1"
+                ></p>
+<p>目前<code>mask</code>属性兼容性较差，大部分可以用前缀识别码实现，<code>IE</code>和<code>EDGE</code>浏览器不支持。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/clipping_and_masking/9.png"
+                      alt="兼容性"
+                ></p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/03/31/fe_native_auto_process/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">前端原生开发的一些自动化处理</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/01/15/git_flow/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">实习第一天，上司让我学习一下Git Flow</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script 
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script >
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '8107c3ce2a0d90f626cd',
+                    clientSecret: 'b18a01255621553f91228374d897d47f3ac5d26a',
+                    repo: 'hexo-site-comments',
+                    owner: 'OUDUIDUI',
+                    admin: ['OUDUIDUI'],
+                    id: __gitalk__pathname,
+                    language: 'en'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('false') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">OUDUIDUI</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%AA%E5%88%87%E5%92%8C%E9%81%AE%E7%BD%A9%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">剪切和遮罩的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#clip-path"><span class="nav-number">2.</span> <span class="nav-text">clip-path</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#inset"><span class="nav-number">2.1.</span> <span class="nav-text">inset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#circle"><span class="nav-number">2.2.</span> <span class="nav-text">circle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ellipse"><span class="nav-number">2.3.</span> <span class="nav-text">ellipse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#polygon"><span class="nav-number">2.4.</span> <span class="nav-text">polygon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E5%90%88SVG%E5%AE%9A%E4%B9%89%E7%9A%84-lt-clipPath-gt-%E4%BD%BF%E7%94%A8"><span class="nav-number">2.5.</span> <span class="nav-text">配合SVG定义的&lt;clipPath&gt;使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8clip-path%E5%AE%9E%E7%8E%B0%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C"><span class="nav-number">2.6.</span> <span class="nav-text">利用clip-path实现变形动画效果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%86%E5%BD%A2%E7%BC%A9%E6%94%BE%E6%95%88%E6%9E%9C"><span class="nav-number">2.6.1.</span> <span class="nav-text">圆形缩放效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%A2%E7%8A%B6%E5%8F%98%E6%8D%A2%E6%95%88%E6%9E%9C"><span class="nav-number">2.6.2.</span> <span class="nav-text">形状变换效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7"><span class="nav-number">2.7.</span> <span class="nav-text">相关工具</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mask"><span class="nav-number">3.</span> <span class="nav-text">mask</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
