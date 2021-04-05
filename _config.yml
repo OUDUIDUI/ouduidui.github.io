@@ -104,8 +104,10 @@ theme: keep
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:OUDUIDUI/ouduidui.github.io.git
-  branch: main
+  repo:
+    github: git@github.com:OUDUIDUI/ouduidui.github.io.git
+    coding: git@e.coding.net:ouduidui/ouduidui/ouduidui.git
+  branch: master
 
 
 # Search
