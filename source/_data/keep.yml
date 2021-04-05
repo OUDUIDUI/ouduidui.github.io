@@ -4,7 +4,7 @@
 base_info:
   title: OUDUIDUI
   author: OUDUIDUI
-  url: https://ouduidui.gitee.io/
+  url: https://ouduidui.github.io/
 
 
 # ---------------------------------------------------------------------------------------
@@ -182,7 +182,7 @@ comment:
   # See: https://github.com/gitalk/gitalk
   gitalk:
     github_id: OUDUIDUI            # GitHub repo owner
-    repository: hexo-site-comments         # Repository name to store issues
+    repository: ouduidui.github.io         # Repository name to store issues
     client_id: 8107c3ce2a0d90f626cd            # GitHub Application Client ID
     client_secret: b18a01255621553f91228374d897d47f3ac5d26a        # GitHub Application Client Secret
 
@@ -213,14 +213,14 @@ lazyload:
 # CDN
 # ---------------------------------------------------------------------------------------
 cdn:
-  enable: false
+  enable: true
 
 
 # ---------------------------------------------------------------------------------------
 # PJAX
 # ---------------------------------------------------------------------------------------
 pjax:
-  enable: false
+  enable: true
 
 
 # ---------------------------------------------------------------------------------------
