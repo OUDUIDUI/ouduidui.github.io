@@ -3,7 +3,6 @@ title: Require和Import的区别
 date: 2021-01-07 16:23:34
 tags: [node,commonJS,javascript]
 categories: [Node]
-sticky: 1
 ---
 
 # 历史背景

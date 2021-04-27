@@ -3,7 +3,6 @@ title: 关于Vue组件通讯那点事
 date: 2020-12-28 14:52:45
 tags: [vue,components]
 categories: [Vue]
-sticky: 1
 ---
 
 > [Github](https://github.com/OUDUIDUI/VueComponentCommunication)

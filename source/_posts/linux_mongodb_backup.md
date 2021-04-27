@@ -3,7 +3,6 @@ title: Linux MongoDB定时备份
 date: 2020-12-24 18:20:25
 tags: [mongodb,linux,crontab]
 categories: [mongodb]
-sticky: 1
 ---
 
 前段时间，我个人的服务器数据库莫名其妙就被删了，得知情况的我泪流满面。

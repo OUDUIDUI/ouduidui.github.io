@@ -3,7 +3,6 @@ title: 手写Promise，通过Promise/A+的872个测试
 date: 2021-04-17 15:21:01
 tags: [Javascript,promise,handwriting]
 categories: [JavaScript]
-sticky: 1
 ---
 > [github](https://github.com/OUDUIDUI/handwriting-javascript-api/tree/promise)
 

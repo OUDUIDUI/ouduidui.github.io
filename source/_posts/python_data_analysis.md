@@ -3,7 +3,6 @@ title: Python数据分析入门
 date: 2020-12-07 16:13:14
 tags: [Python,数据分析,Pandas,matplotlib]
 categories: [Python]
-sticky: 1
 ---
 
 # 基础知识

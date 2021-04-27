@@ -3,7 +3,6 @@ title: 简单实现VUE-Router
 date: 2021-04-09 21:59:18
 tags: [vue,vue-router]
 categories: [Vue]
-sticky: 1
 ---
 > [github](https://github.com/OUDUIDUI/vue-source-code-study/tree/vue_router)
 

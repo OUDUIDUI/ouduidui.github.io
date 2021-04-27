@@ -3,7 +3,6 @@ title: Git工作原理及常用命令
 date: 2020-12-25 9:54:42
 tags: [git,github,gitlab,gitee]
 categories: [Git]
-sticky: 1
 ---
 
 # git介绍

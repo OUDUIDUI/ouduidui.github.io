@@ -3,7 +3,6 @@ title: 前端原生开发的一些自动化处理
 date: 2021-03-31 10:27:32
 tags: [前端,html,gulp,node]
 categories: [Node]
-sticky: 1
 ---
 
 > [Github](https://github.com/OUDUIDUI/native-template)

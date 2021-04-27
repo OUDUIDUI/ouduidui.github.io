@@ -3,7 +3,6 @@ title: 实习第一天，上司让我学习一下Git Flow
 date: 2021-01-15 14:53:14
 tags: [git,git flow]
 categories: [Git]
-sticky: 1
 ---
 
 # 简述Git Flow

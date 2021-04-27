@@ -3,7 +3,6 @@ title: CSS中的剪切和遮罩
 date: 2021-01-15 18:03:00
 tags: [css,clip-path,mask]
 categories: [CSS]
-sticky: 1
 ---
 
 # 剪切和遮罩的区别
