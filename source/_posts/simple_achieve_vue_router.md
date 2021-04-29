@@ -1,6 +1,6 @@
 ---
 title: 简单实现VUE-Router
-date: 2021-04-09 21:59:18
+date: 2021-04-29 15:48:26
 tags: [vue,vue-router]
 categories: [Vue]
 ---
@@ -161,9 +161,23 @@ export default VueRouter;
 
 ### 注册全局组件`router-link`和`router-view`
 
-首先在`install`方法中注册两个全局变量。
+首先我们可以新建两个文件：`ou-router-link.js`和`ou-router-view.js`。
 
 ```javascript
+// ou-router-link.js 和 ou-router-view.js
+export default {
+    render(createElement){
+        return createElement('div','router-view');   // 返回虚拟Dom
+    }
+}
+```
+
+然后引入进来，在`install`方法中注册两个全局组件。
+
+```javascript
+import ouRouterLink from "./ou-router-link";
+import ouRouterView from "./ou-router-view";
+
 let Vue; 
 
 class VueRouter {}
@@ -176,16 +190,8 @@ VueRouter.install = function (_Vue) {
     })
 
     /* 注册全局组件router-link和router-view */
-    Vue.component('router-link',{
-        render(createElement){
-            return createElement('a','router-link');     // 返回虚拟Dom
-        }
-    });
-    Vue.component('router-view',{
-        render(createElement){
-            return createElement('div','router-view');   // 返回虚拟Dom
-        }
-    })
+    Vue.component('router-link', ouRouterLink);
+    Vue.component('router-view', ouRouterView);
 }
 
 export default VueRouter;
@@ -198,23 +204,23 @@ export default VueRouter;
 - 获取`router-view`的插槽内容，插入`a`标签中
 
 ```javascript
- Vue.component('router-link', {
-        props: {
-            to: {
-                type: String,
-                required: true
-            }
-        },
-
-        render(createElement) {      // 返回虚拟Dom
-            return createElement('a',
-                {
-                    attrs: {href: '#' + this.to}    // 设置a标签的href属性
-                },
-                this.$slots.default    // 获取标签插槽内容
-            );
+export default {
+    props: {
+        to: {
+            type: String,
+            required: true
         }
-    });
+    },
+
+    render(createElement) {      // 返回虚拟Dom
+        return createElement('a',
+            {
+                attrs: {href: '#' + this.to}    // 设置a标签的href属性
+            },
+            this.$slots.default    // 获取标签插槽内容
+        );
+    }
+}
 ```
 
 #### 实现`router-view`
@@ -224,12 +230,12 @@ export default VueRouter;
 因此，我们不进行渲染任何内容，后面实现监听`url`变化后，从映射表获取到组件后，再来实现`router-view`。
 
 ```javascript
-Vue.component('router-view', {
-        render(createElement) {
-            let component = null;
-            return createElement(component);   // 返回虚拟Dom
-        }
-    })
+export default {
+    render(createElement) {
+        let component = null;
+        return createElement(component);   // 返回虚拟Dom
+    }
+}
 ```
 
 ### 监听`url`变化
@@ -261,24 +267,37 @@ class VueRouter {
 }
 ```
 
+同时，我们可以再创建一个路由映射表，便于组件获取到路由信息。
+
+```javascript
+class VueRouter {
+    constructor(options) {
+      
+        ...
+      
+        // 创建一个路由映射表
+        this.routeMap = {}
+        options.routes.forEach(route => {
+            this.routeMap[route.path] = route
+        })
+    }
+}
+```
+
 因此，我们可以来实现`router-view`组件。
 
 在`render`函数中，`this.$router`指向的是`VueRouter`创建的实例，因此我们可以通过`this.$router.$option.routes`获取路由映射表，`this.$router.current`获取当前路由，然后通过遍历匹配获取组件。
 
 ```javascript
-Vue.component('router-view', {
-  	render(createElement) {
-    		let component = null;
-   		 // 获取当前路由对应的组件
-   		 const route = this.$router.$options.routes
-    			.find(route => route.path === this.$router.current);
+export default {
+    render(createElement) {
+        //获取path对应的component
+        const {routeMap, current} = this.$router;
 
-  		  if (route) {
-  				    component = route.component;
-  		  }
-  		  return createElement(component);   // 返回虚拟Dom
- 		 }
-})
+        const component = routeMap[current].component || null;
+        return createElement(component)
+    }
+}
 ```
 
 ### 实现`history`模式
@@ -305,6 +324,11 @@ class VueRouter {
             case 'history':
                 this.historyModeHandle();
         }
+      
+        this.routeMap = {}
+        options.routes.forEach(route => {
+            this.routeMap[route.path] = route
+        })
     }
 
     // Hash模式处理
@@ -332,7 +356,7 @@ class VueRouter {
 在`history`模式下，当我们点击`router-link`时，即点下`a`标签时，页面会重新刷新。所以我们需要设置一下其点击事件，取消默认事件，然后通过`history.pushState`去修改`url`，然后重设`current`的值。
 
 ```javascript
-Vue.component('router-link', {
+export default {
     render(createElement) {      // 返回虚拟Dom
         const self = this;
         const route = this.$router.$options.routes
@@ -351,20 +375,19 @@ Vue.component('router-link', {
             this.$slots.default    // 获取标签插槽内容
         );
     }
-})
+}
 ```
 
 最后我们将两种模式的`router-link`组件进行一个合并。
 
 ```javascript
-Vue.component('router-link', {
+export default {
     props: {
         to: {
             type: String,
             required: true
-        }
+        },
     },
-
     render(createElement) {      // 返回虚拟Dom
         if(this.$router.$options.mode === 'hash'){
             return createElement('a',
@@ -392,6 +415,250 @@ Vue.component('router-link', {
             );
         }
     }
-});
+}
 ```
 
+### 实现嵌套路由
+
+`vue-router`实际上是可以实现路由嵌套的。
+
+我们在路由配置中，在`About`页面添加一个子路由，即`/about/info`。
+
+```javascript
+import Vue from 'vue'
+import VueRouter from './ou-vue-router'
+import Home from '../views/Home.vue'
+
+
+Vue.use(VueRouter)
+
+const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+        // 添加一个子路由
+        children: [
+            {
+                path: '/about/info',
+                component: {
+                    render(h) {
+                        return h('div', 'info page')
+                    }
+                }
+            }
+        ]
+    }
+]
+
+const router = new VueRouter({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
+})
+
+export default router
+
+```
+
+然后在`About.vue`中插入`router-view`组件。
+
+```vue
+<template>
+    <div class="about">
+        <h1>This is an about page</h1>
+        <router-view></router-view>
+    </div>
+</template>
+
+```
+
+这时候运行的话，来到`About`页面的时候，后台就会报错，而来到`Info`页面，则不会显示内容。
+
+这是因为在`About`页面中，存在一个`router-view`组件，而这个`router-view`会一直返回`About`页面的虚拟Dom，而虚拟Dom中又有一个`router-view`组件，因此形成一个死循环。
+
+因此我们需要在`router-view`组件中，设置一个变量来保存页面的深度值，即判定是否返回对应页面的虚拟Dom。
+
+其次，我们还需要处理路由里的`children`属性，获取里面的嵌套路由信息，否则的话`/about/info`是无法渲染出来的。
+
+因此我们重构一下前面`url`监听的代码，使用一个`matched`响应式数组存放当前路径下的所有路由信息，可通过页面深度去获取到对应的路由信息。
+
+
+
+因此，我们就需要完成这两个任务：
+
+- `router-view`深度标记；
+
+- 路由匹配时获取代表深度层级的matched数组
+
+  
+
+首先，我们不再用`routeMap`存路由映射表了，也不用`current`作为响应式属性了，使用一个`matched`数组来作为响应式属性。
+
+而这个`matched`属性，里面存放的是当前路径下的所有路由信息，比如`/about`路径，`matched`数组就存放着`about`路由的信息，如果是`/about/info`路径，`matched`存放的是`about`路由和`info`路由的信息，因此我们也可以通过页面深度去获取到对应的路由信息。
+
+而`matched`数组的赋值动作，我们单独写一个`match`方法来实现。
+
+然后每一次路由的变化，我们都需要清空`matched`数组，并调用一次`match`办法。
+
+```javascript
+class VueRouter {
+    constructor(options) {
+        this.$options = options;
+
+        switch (options.mode) {
+            case 'hash':
+                this.hashModeHandle();
+                break;
+            case 'history':
+                this.historyModeHandle();
+                break;
+        }
+    }
+
+    // Hash模式处理
+    hashModeHandle() {
+        // 将current设置为响应式数据，即current变化时router-view的render函数能够再次执行
+        this.current = window.location.hash.slice(1) || '/';
+        Vue.util.defineReactive(this, 'matched', []);
+        // match方法可以递归遍历路由表，获得匹配关系的数组
+        this.match();
+
+        // 监听hash变化
+        window.addEventListener('hashchange', () => {
+            this.current = window.location.hash.slice(1);
+            this.matched = [];
+            this.match();
+        })
+    }
+
+    // History模式处理
+    historyModeHandle() {
+        this.current = window.location.pathname || '/';
+        Vue.util.defineReactive(this, 'matched', []);
+        this.match();
+    }
+
+    match(routes) { }
+    }
+}
+```
+
+在`router-link`组件也需要做一下修改：
+
+```javascript
+export default {
+    props: {
+        to: {
+            type: String,
+            required: true
+        },
+    },
+    render(createElement) { 
+        if(this.$router.$options.mode === 'hash'){
+            return createElement('a',
+                {
+                    attrs: {href: '#' + this.to}  
+                },
+                this.$slots.default  
+            );
+        }else{
+            const self = this;
+            const route = this.$router.$options.routes
+                .find(route => route.path === this.to);
+            return createElement('a',
+                {
+                    attrs: {href: this.to}, 性
+                    on: {
+                        click(e) {
+                            e.preventDefault(); 
+                            history.pushState({}, route.name, self.to); 
+                            self.$router.current = self.to;
+                            self.$router.matched = [];   // 清空matched数组
+                            self.$router.match();   // 调用match方法
+                        }
+                    }
+                },
+                this.$slots.default 
+            );
+        }
+    }
+}
+```
+
+接下来我们来完善一下`match`方法。
+
+首先`match`方法接收一个`routes`参数，如果未传入参数的话，默认为`this.$options.routes`路由表。
+
+然后遍历理由表，如果当前路径是根路径的话，就将根路径的路由信息`push`到`matched`数组中，因为一般不会根路径下创建嵌套路由，因此我们就可以结束遍历，直接`return`。
+
+如果不是根路径的话，就将与当前路径匹配的路由信息，存入`matched`数组中，并且判断该路由信息是否有`chilren`属性，有的话自调用`match`方法，并传入`route.chilren`作为参数。
+
+```javascript
+match(routes) {
+    routes = routes || this.$options.routes;
+
+    // 递归遍历
+    for(const route of routes){
+        if(route.path === '/' && this.current === '/'){
+            this.matched.push(route);
+            return ;
+        }
+
+        // 不是根路径
+        if(route.path !== '/' && this.current.indexOf(route.path) !== -1){
+            this.matched.push(route);
+            // 判断是否有嵌套页面
+            if(route.children && route.children.length){
+                this.match(route.children);
+            }
+            return ;
+        }
+    }
+}
+```
+
+最后，我们来完善一下`router-view`。
+
+首先我们需要一个对当前虚拟Dom贴个标签，即在它的data中新建一个`routerView`的变量，设置为`true`。
+
+其次，我们设置一个深度变量`depth`，初始值为0；然后获取该虚拟Dom的父级组件。如果父级组件存在的话，我们判断该父级组件的`data`中是否存在`routerView`的变量并且为`true`，如果存在的话，`depth`加一。
+
+接着就继续检测该父组件的父组件，直至找不到为止。
+
+最后我们获取到了当前`router-view`的路由嵌套深度，就匹配一下`matched`数组，获取对应的路由信息，并返回出去。如果匹配不到的话，就返回`null`。
+
+```javascript
+export default {
+    render(createElement) {
+        // 标记当前router-view的深度
+        this.$vnode.data.routerView = true;  // 当前虚拟DOM的data，添加一个routerView属性
+
+        let depth = 0;
+        let parent = this.$parent;
+
+        while (parent) {
+            if (parent.$vnode && parent.$vnode.data && parent.$vnode.data.routerView) {
+                // 说明当前parent是一个router-view
+                depth++;
+            }
+            parent = parent.$parent;
+        }
+
+        //获取path对应的component
+        let component = null;
+        const route = this.$router.matched[depth];
+        if (route) {
+            component = route.component;
+        }
+
+        console.log(component);
+        return createElement(component)
+    }
+}
+```
