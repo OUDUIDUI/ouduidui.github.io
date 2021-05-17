@@ -239,18 +239,19 @@
 <p><code>MVVM</code> 与 <code>MVC</code> 最大的不同就是<code>MVVM</code>实现了 <code>View</code> 和 <code>Model</code> 的自动同步，也就是当<code>Model</code> 的属性改变时，我们不用再自己手动操作 <code>Dom</code> 元素，来改变 <code>View</code> 的显示，而是改变属性后该属性对应 View 层显示会自动改变。</p>
 <p><code>MVVM</code>框架的三个要素：<strong>数据响应式、模板引擎及其渲染</strong>。</p>
 <ul>
-<li>数据响应式<ul>
-<li>监听数据变化并在视图中更新；</li>
-<li>在<code>Vue2.x</code>中，是根据<code>Object.defineProperty()</code>来实现数据响应式的；</li>
+<li><p>数据响应式</p>
+<ul>
+<li>监听数据变化并在视图中更新</li>
+<li>在<code>Vue2.x</code>中，是根据<code>Object.defineProperty()</code>来实现数据响应式的</li>
 </ul>
 </li>
-<li>模板引擎<ul>
-<li>提供描述视图的模板语法；</li>
-<li><code>Vue</code>的插槽<code>&#123;&#123;&#125;&#125;`和指令`v-bind`、·v-on·、`v-model`等；
+<li><p>模板引擎</p>
+<ul>
+<li>提供描述视图的模板语法</li>
+<li><code>Vue</code>的插槽<code>&#123;&#123;&#125;&#125;`和指令`v-bind`、·v-on·、`v-model`等
+
 - 渲染
-  - 将模板渲染成`HTML`进行显示。
-  
-123456
+  - 将模板渲染成`HTML`进行显示
 
 # 数据响应式原理
 
