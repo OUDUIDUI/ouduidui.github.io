@@ -5,7 +5,7 @@ tags: [vue,handwriting]
 categories: [Vue]
 ---
 
-> https://github.com/OUDUIDUI/vue-source-code-study/tree/vue
+> https://github.com/OUDUIDUI/vue-source-code-study/tree/simple_vue2
 
 # Vue的设计思想
 

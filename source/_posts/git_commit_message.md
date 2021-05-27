@@ -48,17 +48,17 @@ feat($route): add support for the `reloadOnUrl` configuration option
 
 `type`是用于说明`commit`的类别，具体的标识如下：
 
-- **`feat`**： 一个新的功能（`feature`）；
-- **`fix`**：修复`bug`;
-- **`docs`**：修改文档，比如`README.md`、`CHANGELOG.md`等；
+- **`feat`**:    一个新的功能（`feature`）；
+- **`fix`**:    修复`bug`;
+- **`docs`**:    修改文档，比如`README.md`、`CHANGELOG.md`等；
 - **`style`**:    修改代码的格式，不影响代码运行的变动，比如空格、格式化代码、补齐句末分号等等；
 - **`refactor`**:   代码的重构，没有新功能的添加以及bug修复的代码改动；
-- **`perf`**：优化代码以提高性能；
-- **`test`**：增加测试或优化改善现有的测试；
-- **`build`**：修改影响项目构建文件或外部依赖项，比如`npm`、`gulp`、`webpack`、`broccoli`等；
-- **`ci`**：修改CI配置文件和脚本；
-- **`chore`**：其他非src路径文件和测试文件的修改，比如`.gitignore`、`.editorconfig`等；
-- **`revert`**：代码回退；
+- **`perf`**:    优化代码以提高性能；
+- **`test`**:    增加测试或优化改善现有的测试；
+- **`build`**:    修改影响项目构建文件或外部依赖项，比如`npm`、`gulp`、`webpack`、`broccoli`等；
+- **`ci`**:    修改CI配置文件和脚本；
+- **`chore`**:    其他非src路径文件和测试文件的修改，比如`.gitignore`、`.editorconfig`等；
+- **`revert`**:    代码回退；
 
 ### scope
 
