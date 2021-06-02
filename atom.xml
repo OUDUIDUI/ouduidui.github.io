@@ -253,13 +253,13 @@
     <category term="Node" scheme="https://ouduidui.github.io/categories/Node/"/>
     
     
-    <category term="node" scheme="https://ouduidui.github.io/tags/node/"/>
-    
     <category term="前端" scheme="https://ouduidui.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="html" scheme="https://ouduidui.github.io/tags/html/"/>
     
     <category term="gulp" scheme="https://ouduidui.github.io/tags/gulp/"/>
+    
+    <category term="node" scheme="https://ouduidui.github.io/tags/node/"/>
     
   </entry>
   
@@ -339,9 +339,9 @@
     <category term="Node" scheme="https://ouduidui.github.io/categories/Node/"/>
     
     
-    <category term="javascript" scheme="https://ouduidui.github.io/tags/javascript/"/>
-    
     <category term="node" scheme="https://ouduidui.github.io/tags/node/"/>
+    
+    <category term="javascript" scheme="https://ouduidui.github.io/tags/javascript/"/>
     
     <category term="commonJS" scheme="https://ouduidui.github.io/tags/commonJS/"/>
     
