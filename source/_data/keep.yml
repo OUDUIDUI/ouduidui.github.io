@@ -55,13 +55,14 @@ social_contact:
   enable: true
   links:
     github:  https://github.com/OUDUIDUI        # your GitHub URL
-    weixin:  https://mmbiz.qpic.cn/mmbiz_png/Gppiaar6dUehL0icejYiciapnhT6kic1W6wfzicE4oibvtHn4f9FxKNA7vRYeLJHxSy3XOAOYg7qnXAZeycLMcSr8ecbw/0?wx_fmt=png        # your WeChat QR-Code URL
+    weixin:          # your WeChat QR-Code URL
     qq:              # your QQ QR-Code URL
     weibo:           # your WeiBo URL
     zhihu:           # your ZhiHu URL
     twitter:         # your twitter URL
     facebook:        # your facebook URL
     email:  oushihao97@163.com         # your email
+    code:  https://juejin.cn/user/4309700183594366
 
 
 # ---------------------------------------------------------------------------------------
