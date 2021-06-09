@@ -654,7 +654,7 @@ function updateChildren(parentElm, oldCh, newCh, insertedVnodeQueue, removeOnly)
 
 ## 流程图
 
-![diff6](/images/vue_diff/diff6.jpg)
+![diff6](/images/vue_diff/diff6.png)
 
 ## 为什么要用key值
 
