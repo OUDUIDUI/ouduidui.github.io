@@ -5,8 +5,6 @@ tags: [vue,components]
 categories: [Vue]
 ---
 
-> [Github](https://github.com/OUDUIDUI/VueComponentCommunication)
-
 抽空梳理了一下Vue常用的组件之间的通讯方式，然后想通过使用的技术进行分类整理笔记。
 
 # Prop传值
