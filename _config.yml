@@ -106,7 +106,6 @@ deploy:
   type: git
   repo:
     github: git@github.com:OUDUIDUI/ouduidui.github.io.git
-    coding: git@e.coding.net:ouduidui/ouduidui/ouduidui.git
   branch: master
 
 
