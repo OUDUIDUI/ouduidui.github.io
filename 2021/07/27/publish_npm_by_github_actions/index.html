@@ -249,7 +249,7 @@
         
 
         <div class="article-content markdown-body">
-            <p>最近自己造了个轮子——<a target="_blank" rel="noopener" href="https://github.com/OUDUIDUI/ga-tracker"><code>ga-tracker</code></a>，即适用于UniApp和微信小程序的谷歌统计 (Google Analytics) SDK，喜欢的朋友可以点个Star！<br>然而当每次更新或修复bugs的时候，都需要手动去更新<code>npm</code>包以及<code>release</code>包，因此就想尝试一下利用**<code>github Actions</code>**来实现自动发布<code>npm</code>和<code>release</code>。</p>
+            <p>最近自己造了个轮子——<a class="link"   target="_blank" rel="noopener" href="https://github.com/OUDUIDUI/ga-tracker" >ga-tracker<i class="fas fa-external-link-alt"></i></a>，即适用于UniApp和微信小程序的谷歌统计 (Google Analytics) SDK，喜欢的朋友可以点个Star！<br>然而当每次更新或修复bugs的时候，都需要手动去更新<code>npm</code>包以及<code>release</code>包，因此就想尝试一下利用**<code>github Actions</code>**来实现自动发布<code>npm</code>和<code>release</code>。</p>
 <blockquote>
 <p>关于github actions的学习，可以去看看<a class="link"   target="_blank" rel="noopener" href="https://docs.github.com/cn/actions" >官方文档<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
@@ -258,34 +258,34 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627376306581-811b8809-ce82-4669-a349-543de8671935.png#align=left&display=inline&height=1286&name=WeChatdb6470d685993f4bb43d203021519421.png&originHeight=1286&originWidth=3838&size=891496&status=done&style=none&width=3838"
+                     data-src="/images/publish_npm_by_github_actions/1.png"
                       alt="WeChatdb6470d685993f4bb43d203021519421.png"
                 ></p>
 <p>然后点击<code>Generate New Token</code>创建一个新的<code>Token</code>。<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627376493306-cfbd83b6-13eb-4057-832c-08155613d8fa.png#align=left&display=inline&height=428&name=WeChat3da491aff53c856dad95c4cf5a2b0d65.png&originHeight=428&originWidth=3012&size=182636&status=done&style=none&width=3012"
+                     data-src="/images/publish_npm_by_github_actions/2.png"
                       alt="WeChat3da491aff53c856dad95c4cf5a2b0d65.png"
                 ></p>
 <p>然后选择<code>Automation</code>，确定创建<code>Token</code>。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627376595439-73045f0f-2918-4873-8d55-aa0dfcbaacc5.png#align=left&display=inline&height=1472&name=WeChat565126ef4c337c96594badfcfe868857.png&originHeight=1472&originWidth=1640&size=532716&status=done&style=none&width=1640"
+                     data-src="/images/publish_npm_by_github_actions/3.png"
                       alt="WeChat565126ef4c337c96594badfcfe868857.png"
                 ></p>
 <p>然后来到你的<code>Github</code>，选择你的项目，点击<code>Settings</code>，然后选择<code>Secrets</code>，点击<code>New repository secret</code>。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627376706640-0e45df44-a90b-4943-8528-53a871bcaf68.png#align=left&display=inline&height=1676&name=WeChat5a182589fc211e0089597980455670b8.png&originHeight=1676&originWidth=3750&size=1347847&status=done&style=none&width=3750"
+                     data-src="/images/publish_npm_by_github_actions/4.png"
                       alt="WeChat5a182589fc211e0089597980455670b8.png"
                 ></p>
 <p>输入名称和<code>Tokens</code>，然后点击保存。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627376843162-9287c383-2a9a-4aac-8dcf-7bed8dfa168a.png#align=left&display=inline&height=163&name=%E6%88%AA%E5%B1%8F2021-07-27%2017.07.18.png&originHeight=163&originWidth=965&size=17405&status=done&style=none&width=965"
+                     data-src="/images/publish_npm_by_github_actions/5.png"
                       alt="截屏2021-07-27 17.07.18.png"
                 ></p>
 <h1 id="编辑github-actions配置文件"><a href="#编辑github-actions配置文件" class="headerlink" title="编辑github actions配置文件"></a>编辑<code>github actions</code>配置文件</h1><p>在你的项目下，新建<code>.github</code>目录，然后再新建一个<code>workflows</code>目录，接着在里面新建一个<code>yml</code>文件。</p>
@@ -293,7 +293,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627378768292-edcf00d1-65dc-4e45-bcf3-d4522638e7ba.png#align=left&display=inline&height=122&name=%E6%88%AA%E5%B1%8F2021-07-27%2017.39.24.png&originHeight=122&originWidth=270&size=11690&status=done&style=none&width=270"
+                     data-src="/images/publish_npm_by_github_actions/6.png"
                       alt="截屏2021-07-27 17.39.24.png"
                 ></p>
 <p>在编辑之前，我先简单说明一下我的项目结构。</p>
@@ -301,7 +301,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627379385131-932e3546-0dbc-4f29-bade-c997034a52a1.png#align=left&display=inline&height=145&name=%E6%88%AA%E5%B1%8F2021-07-27%2017.49.41.png&originHeight=145&originWidth=251&size=10920&status=done&style=none&width=251"
+                     data-src="/images/publish_npm_by_github_actions/7.png"
                       alt="截屏2021-07-27 17.49.41.png"
                 ></p>
 <p>接下来我们开始编辑配置文件。</p>
@@ -311,14 +311,14 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627380876743-4e0e2459-d5ba-4179-9755-be8e139cc21a.png#align=left&display=inline&height=498&name=%E6%88%AA%E5%B1%8F2021-07-27%2018.13.04.png&originHeight=498&originWidth=1916&size=80339&status=done&style=none&width=1916"
+                     data-src="/images/publish_npm_by_github_actions/8.png"
                       alt="截屏2021-07-27 18.13.04.png"
                 ></p>
 <p>同时你可以点进去，进一步查看执行情况，如果报错了你也能准确定位到哪里出问题了。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.nlark.com/yuque/0/2021/png/1561137/1627380902993-29d543a8-a0bf-4a1c-ad23-644efc7876e8.png#align=left&display=inline&height=829&name=%E6%88%AA%E5%B1%8F2021-07-27%2018.14.53.png&originHeight=829&originWidth=1910&size=125185&status=done&style=none&width=1910"
+                     data-src="/images/publish_npm_by_github_actions/9.png"
                       alt="截屏2021-07-27 18.14.53.png"
                 ></p>
 <p>此时看看npm包和release，也都都更新到最新版本了。</p>
